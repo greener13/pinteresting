@@ -1,8 +1,15 @@
 <div class="jumbotron center">
 	<h1>Pinterest.Dentist</h1>
+
+	<% if user_signed_in? %>
+		Welcome! Pin something denteresting on June 14th!
+	<% else %>
 	<p>Pinterest for dentists</p> 
+	<p>Site opens June 14th. Go ahead and sign up today for the launch!</p>
 	<p>
 		<%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
 		<%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
 	</p>
+	<% end %>
+
 </div>
